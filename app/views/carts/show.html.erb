@@ -4,6 +4,8 @@
     <h1>My Cart</h1>
   </header>
 
+  <% if cart_subtotal_cents != 0 %>
+
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -49,4 +51,12 @@
     </div>
   </div>
 
+  <% else %>
+
+    <div>
+      <h3>Your shopping cart is empty!</h3>
+    </div>
+    <%= link_to "Back", :back %>
+
+  <% end %>
 </section>
